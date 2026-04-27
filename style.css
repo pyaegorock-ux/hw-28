@@ -1,0 +1,32 @@
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 1. Left Image: Rounded corners with object-fit */
+.img-rounded {
+    width: 33%;
+    height: 300px;
+    border-radius: 18px;
+    /* 'cover' keeps aspect ratio by cropping edges instead of squishing */
+    object-fit: cover; 
+}
+
+/* 2. Middle Image: Perfect Circle */
+.img-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Creates a circle */
+    border: 1px solid #000;
+    object-fit: cover;
+}
+
+/* 3. Right Image: Forced Distortion */
+.img-distorted {
+    width: 33%;
+    height: 300px;
+    /* 'fill' is the default behavior that causes stretching/distortion */
+    object-fit: fill; 
+}
